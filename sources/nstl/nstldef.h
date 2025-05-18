@@ -105,6 +105,9 @@ typedef uint8_t byte;
 #else
 #define NSTD_NULLPTR(t) ((t*)0)
 #endif
+
+typedef float real32_t;
+typedef double real64_t;
 } // eof nstd
 
 
