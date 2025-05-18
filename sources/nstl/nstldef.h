@@ -92,11 +92,19 @@ typedef unsigned long long uint64_t;
 typedef std::size_t size_t;
 typedef std::ptrdiff_T ptrdiff_t;
 
+// byte
 #ifdef NSTD_HAS_CPP17
 typedef std::byte byte;
 #else
 typedef uint8_t byte;
-#endif // byte
+#endif
+
+//nullptr
+#ifdef NSTD_HAS_CPP11
+#define NSTD_NULLPTR(t) nullptr
+#else
+#define NSTD_NULLPTR(t) ((t*)0)
+#endif
 } // eof nstd
 
 
